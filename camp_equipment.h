@@ -17,8 +17,8 @@ private:
 
 public:
 	virtual void outputEquipAttributeInfo() = 0;	// characteristic of Abstract class
-	Equipment(string _itemCode, string _itemName, string _brand,
-		string _itemType, int _dateOfPurchase, string _condition, string _status);
+	Equipment(string itemCode, string itemName, string brand,
+		string itemType, int dateOfPurchase, string condition, string status);
 	void outputBasicInfo(); 
 	bool isReturn();					//	GENERAL Function
 	
