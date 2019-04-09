@@ -16,7 +16,7 @@ private:
 	string _status;
 
 public:
-	virtual void outputAttributeInfo() = 0;	// characteristic of Abstract class
+	virtual void outputEquipAttributeInfo() = 0;	// characteristic of Abstract class
 	Equipment(string _itemCode, string _itemName, string _brand,
 		string _itemType, int _dateOfPurchase, string _condition, string _status);
 	void outputBasicInfo(); 
@@ -34,7 +34,7 @@ private:
 
 public:
 	
-	virtual void outputAttributeInfo();
+	virtual void outputTentAttributeInfo();
 };
 class Stove : public Equipment {
 private:
@@ -42,7 +42,7 @@ private:
 	string fuelType;
 
 public:
-	void outputAttributeInfo();
+	void outputStoveAttributeInfo();
 };
 
 class Lantern : public Equipment {
@@ -52,6 +52,6 @@ private:
 	string fuelType;
 		
 public:
-	void outputAttributeInfo();
+	void outputLanternAttributeInfo();
 };
 #endif
