@@ -15,8 +15,8 @@ private:
 	string _address;
 
 public:
-	virtual void outputBasicInfo() = 0;
-	virtual void outputAttributeInfo() = 0;
+	virtual void outputBasicInfo();
+	virtual void outputAttributeInfo();
 	User();
 	User(string TypeOfUser) {
 		
