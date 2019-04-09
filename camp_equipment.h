@@ -1,3 +1,22 @@
+#ifndef EQUIPMENT_H
+#define EQUIPMENT_H
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Equipment {
+private:
+	string _itemCode;
+	string _itemName;
+	string _brand;
+	string _itemType;
+	int _dateOfPurchase;
+	string _condition;
+	string _status;
+
+public:
+	virtual void outputAttributeInfo() = 0;	// characteristic of Abstract class
 	Equipment(string _itemCode, string _itemName, string _brand,
 		string _itemType, int _dateOfPurchase, string _condition, string _status);
 	void outputBasicInfo(); 
