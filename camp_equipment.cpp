@@ -18,18 +18,18 @@ void Equipment::outputBasicInfo()
 }
 
 
-void Tent::outputAttributeInfo()
+void Tent::outputTentAttributeInfo()
 {
 	cout << pplnum << "|" << tentType << "|" << numberOfDoors << "|" << doubleLayer << "|" << colour << endl;
 }
 
 
-void Stove::outputAttributeInfo()
+void Stove::outputStoveAttributeInfo()
 {
 	cout << stoveType << "|" << fuelType << endl;
 }
 
-void Lantern::outputAttributeInfo()
+void Lantern::outputLanternAttributeInfo()
 {
 	cout << lanternSize << "|" << lanternType << "|" << fuelType << endl;
 }
