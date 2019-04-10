@@ -1,8 +1,14 @@
+#include "admin.h"
 #include <iostream>
 #include <string>
 using namespace std;
 
-int selectMenuOption()
+int subMenu() {
+
+}
+
+
+int getMenuOption()
 {
 	system("cls");
 	int option;
@@ -17,12 +23,41 @@ int selectMenuOption()
 		cout << endl;
 		cout << "Select your option number" << endl;
 		cin >> option;
-	} while (option < 1 || option > 6);
+	} while (option < 1 || option > 5);
 	return option;
 }
 
 int main(){
-	string UserId, password;
+	Admin admin;
+	int option = getMenuOption();
+
+	cout << "Welcome to use our Camp Equipment Loan Services!" << endl;
+
+	while (option != 5) {
+		string UserId, password;
+
+		cout << "Enter your UserId: ";
+		cin >> UserId;
+
+		cout << "Enter your password: ";
+		cin >> password;
+
+		if ()
+		switch (option) {
+		case 1: 
+			//	function (display camp equipment categorical list)
+			break;
+		case 2:
+			//	function (loan record)
+		case 3:
+			//	sub-menu (first time user)
+		case 4:
+			//	Return system
+		}
+		else cout << "Invalid input! Please try again!" << endl;
+	}
+	
+
 	system("pause");
 	return 0;
 }
