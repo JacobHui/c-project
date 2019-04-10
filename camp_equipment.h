@@ -17,10 +17,10 @@ private:
 
 public:
 	virtual void outputEquipAttributeInfo() = 0;	// characteristic of Abstract class
-	Equipment(string itemCode, string itemName, string brand,
-		string itemType, int dateOfPurchase, string condition, string status);
+	Equipment(string itemCode, string itemName, string brand, string itemType, int dateOfPurchase, string condition, string status);
 	void outputBasicInfo(); 
-	bool isReturn();					//	GENERAL Function
+	bool isReturn();
+	bool Avaliable();
 	
 };
 	
@@ -34,7 +34,7 @@ private:
 
 public:
 	
-	virtual void outputTentAttributeInfo();
+	void outputTentAttributeInfo();
 };
 class Stove : public Equipment {
 private:
