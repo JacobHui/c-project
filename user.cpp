@@ -24,7 +24,11 @@ string User::getaddress() {
 }
 
 User::User() {
-	// later add
+	_UserId = "";
+	_Name = "";
+	_section = "";
+	_dateOfBirth = 0;
+	_address = "";
 }
 
 User::User(string UserId, string Name, string section, int dateOfBirth, string address) {
