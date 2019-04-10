@@ -1,13 +1,12 @@
 #ifndef USER_H
 #define USER_H
-
 #include <iostream>
 #include <string>
 
 using namespace std;
 
 class User {
-private:
+protected:
 	string _UserId;
 	string _Name;
 	string _section;
@@ -15,42 +14,47 @@ private:
 	string _address;
 
 public:
-	virtual void outputBasicInfo();
-	virtual void outputAttributeInfo();
+	virtual void outputUserAttributeInfo() = 0;
+	string getUserId();
+	string getName();
+	string getsection();
+	int getdateOfBirth();
+	string getaddress();
 	User();
-	User(string TypeOfUser) {
-		
-	}
+	User(string UserId, string Name, string section, int dateOfBirth, string address);
+	bool canBorrow();
 
 };
 
 class Scout : public User {
 private:
-	string SCTrank[3] = { "Member", "Patrol Leader", "Assistance Patrol Leader" };
+	string _SCTrank;
+	int MaxLoan;
 
 public:
-	void outputBasicInfo();
-	virtual void outputAttributeInfo();
+	Scout(string UserId, string Name, string section, int dateOfBirth, string address, string SCTrank);
 };
 
 class Scouter : public User {
 private:
-	string SCMrank[3] = { "Scout Leader", "Assistant Scout Leader", "Rover Scout Leader" };
+	string _SCMrank;
+	int MaxLoan;
 
 public:
-	virtual void outputBasicInfo();
-	virtual void outputAttributeInfo();
+	Scouter(string UserId, string Name, string section, int dateOfBirth, string address, string SCMrank);
 };
 
 class Venture : public User {
+private:
+	int MaxLoan;
 public:
-	virtual void outputBasicInfo();
-	virtual void outputAttributeInfo();
+	Venture(string UserId, string Name, string section, int dateOfBirth, string address);
 };
 
 class Rover : public User {
+private:
+	int MaxLoan;
 public:
-	virtual void outputBasicInfo();
-	virtual void outputAttributeInfo();
+	Rover(string UserId, string Name, string section, int dateOfBirth, string address);
 };
 #endif 
