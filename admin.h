@@ -1,3 +1,5 @@
+#include "filehandler.h"		//	insert tabulated files
+#include "camp_equipment.h"		// display list of camp equipment
 #ifndef ADMIN_H
 #define ADMIN_H
 #include <iostream>
@@ -15,5 +17,9 @@ public:
 	string getpassword();
 	void setUserId(string UserId);
 	void setpassword(string password);
+	Admin();
+	bool isAdminLogin(string UserId, string password);
+	void displayloanRecord();
+
 };
 #endif 
