@@ -37,3 +37,7 @@ void Lantern::outputLanternAttributeInfo()
 bool Equipment::isReturn() {
 	 _status == "in" ? true : false;
 }
+
+bool Equipment::Avaliable() {
+	_condition == "good" ? true : false;
+}
