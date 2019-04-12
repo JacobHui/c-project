@@ -1,33 +1,34 @@
-#include "filehandler.h"		//	insert tabulated files
-#include "camp_equipment.h"		// display list of camp equipment
-#ifndef ADMIN_H
-#define ADMIN_H
-#include <iostream>
-#include <string>
-#include <fstream>
-using namespace std;
+#include "Admin.h"
+#include<iostream>
+string Admin::getUserId() {
+	return _UserId;
+}
 
-class Admin
-{
-private:
-	string _UserId;
-	string _password;
-	int _loanDate;
-	string _itemCode;
-	string _itemName;
-	string _NameOfBorrower;
-	int _returnDate;
-	string _status;
+string Admin::getpassword() {
+	return _password;
+}
 
-public:
-	string getUserId();
-	string getpassword();
-	void setUserId(string UserId);
-	void setpassword(string password);
-	Admin();
-	void loanRecord(int _loanDate, string _itemCode, string _itemName,
-		string _NameOfBorrower, int _returnDate, string _status);
-	void displayloanRecord();
+void Admin::setUserId(string UserId) {
+	_UserId = UserId;
+}
+void Admin::setpassword(string password) {
+	_password = password;
+}
 
-};
-#endif 
+Admin::Admin() {
+	_UserId = "admin";
+	_password = "admin";
+}
+
+/*bool Admin::isAdminLogin(string UserId, string password) {
+	bool access = true;
+
+	access = ((_UserId == UserId) && (_password == password)) ? true : false;
+	system("cls");
+	return access;
+}*/
+
+void Admin::displayloanRecord() {
+	ifstream file;
+	file.open("user.txt");
+}
